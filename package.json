@@ -7,7 +7,8 @@
     "test": "jest --watchAll",
     "dev-test": "nodemon dev-test.js",
     "start": "node ./app",
-    "dev": "nodemon ./app"
+    "dev": "nodemon ./app",
+    "auto-mine": "node auto-mine.js"
   },
   "keywords": [],
   "author": "",

@@ -5,6 +5,7 @@ class Blockchain {
         this.chain = [Block.genesis()];
     }
 
+    // pushes a new block to the blockchain
     addBlock(data){
         const block = Block.mineBlock(this.chain[this.chain.length-1], data)
         this.chain.push(block);
@@ -37,6 +38,8 @@ class Blockchain {
         }
     }
 
+    // this replaces the blockchain if:
+    // - it's valid and longer than the current chain
     replaceChain(newChain) {
 
         // only want to replace a chain if it's longer than current chain

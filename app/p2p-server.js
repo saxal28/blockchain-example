@@ -34,6 +34,11 @@ class P2pServer {
         })
     }
 
+    // this is called each time socket receives new data (mine)
+    // WHAT THIS DOES:
+    // - gets blockchain from peer
+    // - parses from string to object
+    // - replaces blockchain with most recent blockchain
     messageHandler(socket) {
         socket.on("message", message => {
             const data = JSON.parse(message);
